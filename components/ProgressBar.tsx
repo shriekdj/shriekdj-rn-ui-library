@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, ViewProps, DimensionValue, useColorScheme } from 'react-native'
+import { View, StyleSheet, ViewProps, useColorScheme } from 'react-native'
 
 type ProgressBarExtraProps = {
   barColor?: string;

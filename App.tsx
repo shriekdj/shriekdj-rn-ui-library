@@ -48,7 +48,7 @@ export default function App() {
           <Chip>Tag 3</Chip>
         </ChipsView>
 
-        <ProgressBar barColor='red' percentage={32} />
+        <ProgressBar barColor='blue' percentage={32} />
       </View>
     </SafeAreaView>
   );

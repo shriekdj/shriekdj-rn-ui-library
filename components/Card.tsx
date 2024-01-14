@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import { View, StyleSheet, useColorScheme, ViewProps } from 'react-native'
 
 const Card = ({ style, onTouchStart, onTouchEnd, children, ...parentProps }: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicClassAttributes<View> & Readonly<ViewProps>) => {

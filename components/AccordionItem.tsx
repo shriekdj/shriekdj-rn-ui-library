@@ -1,25 +1,16 @@
 import React, { useState } from 'react';
-import type { PropsWithChildren } from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
   ViewProps,
-  Button,
-  TouchableOpacityProps,
   ViewStyle,
   StyleProp,
   TextStyle,
 } from 'react-native';
-// import Icon from 'react-native-vector-icons/FontAwesome';
 
-// type AccordionItemPros = PropsWithChildren<{
-//   title: string;
-// }>;
-interface AccordionItemProps extends React.JSX.IntrinsicAttributes, React.JSX.IntrinsicClassAttributes<View>, Readonly<ViewProps> {
+type AccordionItemProps = {
   headerTitle: string;
   headerStyles?: StyleProp<ViewStyle>;
   headerTitleStyles?: StyleProp<TextStyle>;
@@ -29,8 +20,7 @@ interface AccordionItemProps extends React.JSX.IntrinsicAttributes, React.JSX.In
   contentStyles?: StyleProp<TextStyle>;
 }
 
-
-function AccordionItem({ headerTitle, children, style, headerStyles, headerTitleStyles, headerIconStyles, headerIcon1, headerIcon2, contentStyles, ...containerProps }: AccordionItemProps): JSX.Element {
+function AccordionItem({ headerTitle, children, style, headerStyles, headerTitleStyles, headerIconStyles, headerIcon1, headerIcon2, contentStyles, ...containerProps }: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicClassAttributes<View> & Readonly<ViewProps> & AccordionItemProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
 
   function toggleItem() {

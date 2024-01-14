@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { TextInput, TextInputProps, StyleSheet, useColorScheme, NativeSyntheticEvent, TextInputFocusEventData } from 'react-native'
+import React, { useState } from 'react';
+import { TextInput, TextInputProps, StyleSheet, useColorScheme } from 'react-native'
 
 const TextInputBox = ({ style, onFocus, ...parentProps }: JSX.IntrinsicAttributes & JSX.IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>) => {
 	// const {style, ...parentProps} = props;
